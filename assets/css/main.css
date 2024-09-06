@@ -10939,6 +10939,8 @@ body .ui-tooltip {
 }
 .about-us-3__content__list {
   list-style: none;
+  list-style-type: none; /* 移除默认列表符号 */
+  padding-left: 0; /* 移除默认的左内边距 */
 }
 .about-us-3__content__list li {
   gap: 10px;
@@ -10952,6 +10954,29 @@ body .ui-tooltip {
   font-size: var(--rr-fw-bold);
   text-transform: capitalize;
   color: var(--rr-color-900);
+  margin-bottom: 20px; /* 为每个列表项添加外边距 */
+  
+  padding-left: 30px; /* 为图标留出空间 */
+  position: relative; /* 为图标定位 */
+}
+
+.about-us-3__content__list strong {
+  font-weight: bold; /* 加粗标题 */
+  display: inline-block; /* 使标题不独占一行 */
+  margin-bottom: 5px; /* 为标题和内容之间添加一些空间 */
+}
+
+.about-us-3__content__list p {
+  font-size: 16px; /* 根据需要调整字体大小 */
+  line-height: 1.5; /* 增加行高以提高可读性 */
+  text-align: left; /* 左对齐文本 */
+}
+
+/* 图标样式 */
+.about-us-3__content__list strong i {
+  position: absolute; /* 绝对定位图标 */
+  left: 0; /* 将图标放在左边 */
+  top: 0; /* 将图标放在顶部 */
 }
 .about-us-3__content__list li:not(:last-child) {
   margin-bottom: 6px;
