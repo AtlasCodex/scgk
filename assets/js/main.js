@@ -4,7 +4,7 @@
 
     /*-----------------------------------------------------------------------------------
         Template Name: Medilix - Healthcare & Medical Bootstrap HTML5 Template
-        �������أ�Http://www.bootstrapmb.com
+        �������أ�Http://www.bootstrapmb.com
     -----------------------------------------------------------------------------------
 
      */
@@ -219,21 +219,19 @@
         $('html, body').animate({
             scrollTop: target.offset().top - 76
         }, 600);
-        $(this).parent().addClass('active');
+        link.parent().removeClass('active'); // 移除所有项的激活状态
+        $(this).parent().addClass('active'); // 只为当前项添加激活状态
         e.preventDefault();
     });
-    $(window).on('scroll', function(){
-        scrNav();
-    });
-
+    
     function scrNav() {
         var sTop = $(window).scrollTop();
+        link.parent().removeClass('active'); // 确保在滚动时移除所有激活状态
         $('section').each(function() {
             var id = $(this).attr('id'),
                 offset = $(this).offset().top-1,
                 height = $(this).height();
             if(sTop >= offset && sTop < offset + height) {
-                link.parent().removeClass('active');
                 $('.main-menu').find('[href="#' + id + '"]').parent().addClass('active');
             }
         });
