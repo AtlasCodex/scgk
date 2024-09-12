@@ -5567,7 +5567,7 @@ body .ui-tooltip {
   font-family: var(--rr-ff-heading);
   padding: 38px 0;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 23px;
 }
 .main-menu ul li.has-dropdown > a {
