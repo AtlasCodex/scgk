@@ -182,7 +182,7 @@
                        
                     </div>
                     <div class="banner__content text-center">
-                        <h4 class="mb-25 mb-xs-20 title-animation">脊柱微创手术导航系统采用先进的人工智能定位与追踪技术，可在术中提供安全精准导航，提高手术效率2-3倍，显著降低并发症风险，同时减少80%的射线使用。</h4>
+                        <h4 class="mb-25 mb-xs-20 title-animation">脊柱微创手术导航系统采用先进的人工智能定位与追踪技术，可在术中提供安全精准3D导航。术中微动补偿技术无需参考定位架，术中3D导航定位精度小于0.5mm。提高手术效率2-3倍，显著降低并发症风险，同时减少80%的射线使用。</h4>
                     </div>
                 </div>
             </div>
@@ -222,10 +222,14 @@
     
                 <div class="col-xl-5 col-md-5 mx-auto">
                     <div class="blog__item mb-30">
-                        <a href="" class="blog__item-media d-block position-relative overflow-hidden">
+                        <div class="blog__item-media d-block position-relative overflow-hidden">
                             <div class="panel wow"></div>
-                            <img class="img-fluid" src="assets/imgs/my/model.png" alt="image not found">
-                        </a>
+                            <img id="video-thumbnail" class="img-fluid" src="assets/imgs/my/3dmodel.png" alt="点击播放视频" onclick="playVideo()" style="cursor: pointer;">
+                            <video id="my-video" class="img-fluid" controls style="display: none;">
+                                <source src="assets/imgs/my/2.mp4" type="video/mp4">
+                                您的浏览器不支持视频标签。
+                            </video>
+                        </div>
     
                         <div class="blog__item-content">
                             <h4 class="mb-15 mb-xs-10"><a href="">空间虚拟重建算法</a></h4>
@@ -238,6 +242,16 @@
             </div>
         </div>
     </section>
+
+    <script>
+        function playVideo() {
+            const video = document.getElementById('my-video');
+            const thumbnail = document.getElementById('video-thumbnail');
+            thumbnail.style.display = 'none'; // 隐藏缩略图
+            video.style.display = 'block'; // 显示视频
+            video.play(); // 播放视频
+        }
+    </script>
     <section id="lingxian" class="about-us-3 about-us-3__space overflow-hidden">
         <div class="container">
             <div class="about-us-3__background">
@@ -271,6 +285,16 @@
                                     </div>
                                 </div>
                             </li>
+
+                            <li>
+                                <div class="d-flex align-items-start">
+                                    <i class="fa-solid fa-circle-check mt-1 me-2"></i>
+                                    <div>
+                                        <strong class="d-inline-block">术中虚拟3D导航</strong>
+                                        <p>独家术中3D虚拟重建技术，实现精准术中3D导航。</p>
+                                    </div>
+                                </div>
+                            </li>
                             <li>
                                 <div class="d-flex align-items-start">
                                     <i class="fa-solid fa-circle-check mt-1 me-2"></i>
@@ -300,6 +324,8 @@
             </div>
         </div>
     </section>
+
+    
 
 
     <!-- treatment-process area start -->
